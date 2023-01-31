@@ -1,2 +1,2 @@
-# OpenGL4M1
+# myOpenGL
 learnOpenGL
