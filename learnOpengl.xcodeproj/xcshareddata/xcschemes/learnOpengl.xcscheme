@@ -36,7 +36,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/user/Mochuan/projects/learnOpenGL/openglLearn/learnOpengl/learnOpengl/shader"
+      customWorkingDirectory = "$(PROJECT_DIR)/learnOpengl/shader"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
