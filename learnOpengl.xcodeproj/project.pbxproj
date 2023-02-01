@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		CE3AA694298774A5008F77AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA693298774A5008F77AB /* main.cpp */; };
 		CE3AA69C2987755A008F77AB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AA69B2987755A008F77AB /* OpenGL.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		CE3AA69F298788A4008F77AB /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AA69D29877750008F77AB /* libglfw.3.3.dylib */; };
 		CE3AA6A129878949008F77AB /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AA6A029878949008F77AB /* GLUT.framework */; };
-		CE3AA6A329878CDE008F77AB /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6A229878CDE008F77AB /* glad.c */; };
 		CE3AA6A72987DF5C008F77AB /* shaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6A52987DF5C008F77AB /* shaderProgram.cpp */; };
 		CE3AA6B12988F075008F77AB /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6AF2988F075008F77AB /* stb_image.cpp */; };
+		CE3AA6C4298A2F09008F77AB /* contextController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6C2298A2F09008F77AB /* contextController.cpp */; };
+		CE3AC2F4298A59FD008F77AB /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC2F3298A59FD008F77AB /* glad.c */; };
+		CE3AC2F6298A5ADE008F77AB /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */; };
+		CE3AC2F9298A61F8008F77AB /* gameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC2F7298A61F8008F77AB /* gameObject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +44,12 @@
 		CE3AA6AF2988F075008F77AB /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		CE3AA6B02988F075008F77AB /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		CE3AA6C129892D73008F77AB /* test.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.obj; sourceTree = "<group>"; };
+		CE3AA6C2298A2F09008F77AB /* contextController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contextController.cpp; sourceTree = "<group>"; };
+		CE3AA6C3298A2F09008F77AB /* contextController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contextController.hpp; sourceTree = "<group>"; };
+		CE3AC2F3298A59FD008F77AB /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = include/glfw/3.3.8/include/glad/src/glad.c; sourceTree = "<group>"; };
+		CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = include/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		CE3AC2F7298A61F8008F77AB /* gameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gameObject.cpp; sourceTree = "<group>"; };
+		CE3AC2F8298A61F8008F77AB /* gameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gameObject.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3AA69F298788A4008F77AB /* libglfw.3.3.dylib in Frameworks */,
+				CE3AC2F6298A5ADE008F77AB /* libglfw.3.3.dylib in Frameworks */,
 				CE3AA6A129878949008F77AB /* GLUT.framework in Frameworks */,
 				CE3AA69C2987755A008F77AB /* OpenGL.framework in Frameworks */,
 			);
@@ -61,6 +69,7 @@
 		CE3AA687298774A5008F77AB = {
 			isa = PBXGroup;
 			children = (
+				CE3AC2F3298A59FD008F77AB /* glad.c */,
 				CE3AA692298774A5008F77AB /* learnOpengl */,
 				CE3AA691298774A5008F77AB /* Products */,
 				CE3AA6A229878CDE008F77AB /* glad.c */,
@@ -87,6 +96,8 @@
 				CE3AA693298774A5008F77AB /* main.cpp */,
 				CE3AA6A52987DF5C008F77AB /* shaderProgram.cpp */,
 				CE3AA6A62987DF5C008F77AB /* shaderProgram.hpp */,
+				CE3AA6C2298A2F09008F77AB /* contextController.cpp */,
+				CE3AA6C3298A2F09008F77AB /* contextController.hpp */,
 			);
 			path = learnOpengl;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 		CE3AA69A2987755A008F77AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */,
 				CE3AA6A029878949008F77AB /* GLUT.framework */,
 				CE3AA69D29877750008F77AB /* libglfw.3.3.dylib */,
 				CE3AA69B2987755A008F77AB /* OpenGL.framework */,
@@ -121,6 +133,8 @@
 		CE3AA6B9298901BC008F77AB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AC2F7298A61F8008F77AB /* gameObject.cpp */,
+				CE3AC2F8298A61F8008F77AB /* gameObject.hpp */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -190,10 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3AC2F4298A59FD008F77AB /* glad.c in Sources */,
 				CE3AA694298774A5008F77AB /* main.cpp in Sources */,
 				CE3AA6B12988F075008F77AB /* stb_image.cpp in Sources */,
 				CE3AA6A72987DF5C008F77AB /* shaderProgram.cpp in Sources */,
-				CE3AA6A329878CDE008F77AB /* glad.c in Sources */,
+				CE3AC2F9298A61F8008F77AB /* gameObject.cpp in Sources */,
+				CE3AA6C4298A2F09008F77AB /* contextController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
