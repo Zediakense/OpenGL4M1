@@ -17,7 +17,7 @@
 namespace  shaderController{
 class shaderController{
 public:
-    shaderController();
+    shaderController(std::string shaderPath);
     ~shaderController();
     bool ReadShader(std::string path,std::string& vs,std::string& fs);
     bool MakeProgram();
@@ -27,10 +27,13 @@ public:
     void SetUniformByName(std::string name,glm::vec3 value);
     void SetUniformByName(std::string name,glm::vec2 value);
     void SetShaderPath(std::string path){m_path = path;}
+    void bind();
+    void unBind();
 
     
 private:
     std::string m_path = "test.shaderam";
+    unsigned int m_shaderProgram = 0;
     
 };
 

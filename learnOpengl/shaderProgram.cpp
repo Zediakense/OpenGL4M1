@@ -11,7 +11,9 @@
 
 namespace  shaderController{
 
-shaderController::shaderController(){
+shaderController::shaderController(std::string shaderPath):
+m_path(shaderPath)
+{
 
 }
 
@@ -45,7 +47,7 @@ bool shaderController::ReadShader(std::string path,std::string& vs,std::string& 
     fs = shader[1];
     printf("read vs---------------\n%sfs---------------\n%s\n",vs.c_str(),fs.c_str());
     f.close();
-    
+    res = true;
     return res;
 }
 
@@ -86,14 +88,14 @@ bool shaderController::MakeProgram(){
         return false;
     }
     // link shaders
-    unsigned int shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
+    m_shaderProgram = glCreateProgram();
+    glAttachShader(m_shaderProgram, vertexShader);
+    glAttachShader(m_shaderProgram, fragmentShader);
+    glLinkProgram(m_shaderProgram);
     // check for linking errors
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    glGetProgramiv(m_shaderProgram, GL_LINK_STATUS, &success);
     if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        glGetProgramInfoLog(m_shaderProgram, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
         return false;
     }
@@ -103,9 +105,12 @@ bool shaderController::MakeProgram(){
     return res;
 }
 
-shaderController & shaderController::Instance(){
-    static shaderController shaderController;
-    return shaderController;
+void shaderController::bind(){
+    glUseProgram(m_shaderProgram);
+}
+
+void shaderController::unBind(){
+    glDeleteProgram(m_shaderProgram);
 }
 
 };
