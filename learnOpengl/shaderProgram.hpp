@@ -27,12 +27,12 @@ public:
     void SetUniformByName(std::string name,glm::vec3 value);
     void SetUniformByName(std::string name,glm::vec2 value);
     void SetShaderPath(std::string path){m_path = path;}
-    void bind();
+    void bind()const;
     void unBind();
 
     
 private:
-    std::string m_path = "test.shaderam";
+    std::string m_path = "test.shader";
     unsigned int m_shaderProgram = 0;
     
 };

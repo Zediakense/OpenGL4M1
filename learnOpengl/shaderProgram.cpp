@@ -105,7 +105,7 @@ bool shaderController::MakeProgram(){
     return res;
 }
 
-void shaderController::bind(){
+void shaderController::bind()const{
     glUseProgram(m_shaderProgram);
 }
 

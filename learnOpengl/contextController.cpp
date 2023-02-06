@@ -50,55 +50,11 @@ bool contextController::init(){
     return true;
 }
 
-void contextController::tick(){
-    while(!glfwWindowShouldClose(m_window)){
-        //draw background
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        //draw background
-        
-        //draw elements
-        struct go * p = m_go;
-        while(p != nullptr){
-            p->go->draw();
-            p = p ->next;
-        }
-        //draw elements
-        
-        glfwSwapBuffers(m_window);
-        glfwPollEvents();
-    }
-    //destroy go
-    struct go * p = m_go;
-    while(p != nullptr){
-        p->go->destroy();
-        p = p ->next;
-    }
-    //destroy
-    glfwTerminate();
-
+contextController & contextController::Instance(){
+    static contextController instance;
+    return instance;
 }
 
-void contextController::addGameObject(std::string path){
-    if(m_go == nullptr){
-        m_go = new struct go();
-        m_go -> index = 0;
-        m_go -> go = new gameObject();
-        m_go -> go -> readModel("");
-        
-        m_go -> next = nullptr;
-        return;
-    }
-    struct go * p = m_go;
-    int indx = 0;
-    while(p->next != nullptr){
-        indx = p ->index;
-        p = p->next;
-    }
-    struct go * q = new struct go;
-    q -> index = indx + 1;
-    q -> go = new gameObject();
-    q -> next = nullptr;
-    p -> next = q;
-    
-}
+
+
+
