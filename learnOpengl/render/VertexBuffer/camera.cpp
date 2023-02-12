@@ -16,7 +16,7 @@ Camera::~Camera(){
 void Camera::MovePos(bool*key,int action,float deltaTime,glm::vec3 cameraFront){
     if(key[GLFW_KEY_W]){
         m_Pos+=cameraFront*deltaTime;
-        printf("camera go front");
+//        printf("camera go front");
     }
     if(key[GLFW_KEY_S])m_Pos-=cameraFront*deltaTime;
     if(key[GLFW_KEY_A])m_Pos+=glm::cross(m_UpVec,cameraFront)*deltaTime;

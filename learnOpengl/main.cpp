@@ -140,6 +140,6 @@ void keyInput_callback(GLFWwindow *window, int key, int scancode, int action ,in
             keys[key] = false;
         }
         
-        camera.MovePos(keys, action, deltaTime, camera.getTarget() - camera.getPos());
+        camera.MovePos(keys, action, deltaTime, glm::vec3(0.0,0.0,-1.0));
     }
 }
