@@ -6,7 +6,7 @@ Texture::Texture(const std::string& path)
 :m_RendererID(0),m_FilePath(path),
 m_localBuffer(nullptr),m_Width(0),m_Height(0),m_BPP(0)
 {
-    // stbi_set_flip_vertically_on_load(1);
+     stbi_set_flip_vertically_on_load(1);
     //翻转图片，从OpenGL的左下角坐标原点开始
     m_localBuffer=stbi_load(path.c_str(),&m_Width,&m_Height,&m_BPP,4);//4 means RGBA
     if(m_localBuffer == NULL){

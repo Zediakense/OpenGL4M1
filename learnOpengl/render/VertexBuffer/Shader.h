@@ -4,7 +4,9 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
 struct ShaderProgramSource{
@@ -29,7 +31,7 @@ public:
     void SetUniform1i(const std::string &name,int value);
     void SetUniform1f(const std::string &name,float value);
     void SetUniform4f(const std::string &name,float v0,float v1,float v2,float v3);
-//    void SetUniformMat4f(const std::string &name,const glm::mat4&matrix);
+    void SetUniformMat4f(const std::string &name,const glm::mat4&matrix);
     void SetUniform3f(const std::string &name,float v0,float v1,float v2);
 
 private:

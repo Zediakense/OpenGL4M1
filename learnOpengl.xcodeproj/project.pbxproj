@@ -57,6 +57,7 @@
 		CE3AA6C3298A2F09008F77AB /* contextController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contextController.hpp; sourceTree = "<group>"; };
 		CE3AC2F3298A59FD008F77AB /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = include/glfw/3.3.8/include/glad/src/glad.c; sourceTree = "<group>"; };
 		CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = include/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		CE4FBFEE2996109A00BCC69C /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
 		CED22E45298F7A0200A0F74C /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = VertexBuffer/VertexArray.cpp; sourceTree = "<group>"; };
 		CED22E46298F7A0200A0F74C /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = VertexBuffer/Renderer.h; sourceTree = "<group>"; };
 		CED22E47298F7A0200A0F74C /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = VertexBuffer/Texture.h; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		CE3AA692298774A5008F77AB /* learnOpengl */ = {
 			isa = PBXGroup;
 			children = (
+				CE4FBFEC29960BBA00BCC69C /* 3rd_party */,
 				CED22E44298F79BE00A0F74C /* render */,
 				CE3AA6C029892C27008F77AB /* asset */,
 				CE3AA6B9298901BC008F77AB /* model */,
@@ -173,6 +175,14 @@
 				CE3AA6C129892D73008F77AB /* test.obj */,
 			);
 			path = asset;
+			sourceTree = "<group>";
+		};
+		CE4FBFEC29960BBA00BCC69C /* 3rd_party */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FBFEE2996109A00BCC69C /* glm */,
+			);
+			path = 3rd_party;
 			sourceTree = "<group>";
 		};
 		CED22E44298F79BE00A0F74C /* render */ = {
