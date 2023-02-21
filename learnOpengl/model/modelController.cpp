@@ -14,14 +14,18 @@ m_modelPath(path)
     ReadModel();
 }
 
+Model::Model(){
+    
+};
+
 bool Model::ReadModel(){
     bool res = false;
     
     std::vector<float> vtem = {
-        -0.5 , -0.5 ,  0.0 , 0.0 , 0.0 ,//bottom left
-         0.5 , -0.5 ,  0.0 , 1.0 , 0.0 ,//bottom right
-        -0.5 ,  0.5 ,  0.0 , 0.0 , 1.0 ,//top left
-         0.5 ,  0.5 ,  0.0 , 1.0 , 1.0  //top right
+        -0.5 , -0.5 ,  0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,//bottom left
+         0.5 , -0.5 ,  0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,//bottom right
+        -0.5 ,  0.5 ,  0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 ,//top left
+         0.5 ,  0.5 ,  0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 1.0  //top right
     };
     m_vertices = vtem;
     

@@ -15,6 +15,7 @@
 		CE3AA6C4298A2F09008F77AB /* contextController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6C2298A2F09008F77AB /* contextController.cpp */; };
 		CE3AC2F4298A59FD008F77AB /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC2F3298A59FD008F77AB /* glad.c */; };
 		CE3AC2F6298A5ADE008F77AB /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */; };
+		CEAD82A0299F47A5005DA6CF /* gameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAD829E299F47A5005DA6CF /* gameObject.cpp */; };
 		CED22E57298F7A0200A0F74C /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED22E45298F7A0200A0F74C /* VertexArray.cpp */; };
 		CED22E58298F7A0200A0F74C /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED22E48298F7A0200A0F74C /* Mesh.cpp */; };
 		CED22E59298F7A0200A0F74C /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED22E49298F7A0200A0F74C /* IndexBuffer.cpp */; };
@@ -58,6 +59,8 @@
 		CE3AC2F3298A59FD008F77AB /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = include/glfw/3.3.8/include/glad/src/glad.c; sourceTree = "<group>"; };
 		CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = include/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		CE4FBFEE2996109A00BCC69C /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
+		CEAD829E299F47A5005DA6CF /* gameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gameObject.cpp; sourceTree = "<group>"; };
+		CEAD829F299F47A5005DA6CF /* gameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gameObject.hpp; sourceTree = "<group>"; };
 		CED22E45298F7A0200A0F74C /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = VertexBuffer/VertexArray.cpp; sourceTree = "<group>"; };
 		CED22E46298F7A0200A0F74C /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = VertexBuffer/Renderer.h; sourceTree = "<group>"; };
 		CED22E47298F7A0200A0F74C /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = VertexBuffer/Texture.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 			children = (
 				CED22E60298F7F7500A0F74C /* modelController.cpp */,
 				CED22E61298F7F7500A0F74C /* modelController.hpp */,
+				CEAD829E299F47A5005DA6CF /* gameObject.cpp */,
+				CEAD829F299F47A5005DA6CF /* gameObject.hpp */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAD82A0299F47A5005DA6CF /* gameObject.cpp in Sources */,
 				CE3AC2F4298A59FD008F77AB /* glad.c in Sources */,
 				CED22E5E298F7A0200A0F74C /* VertexBuffer.cpp in Sources */,
 				CE3AA694298774A5008F77AB /* main.cpp in Sources */,

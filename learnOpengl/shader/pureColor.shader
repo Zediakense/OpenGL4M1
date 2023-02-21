@@ -12,7 +12,7 @@ uniform mat4 proj;
 uniform mat4 view;
 
 void main(){
-  gl_Position = proj * view * model * vec4(aPos, 1.0);
+  gl_Position = vec4(aPos, 1.0);
   texCoord = pTexCoord;
 }
 
@@ -23,5 +23,5 @@ in vec2 texCoord;
 uniform sampler2D BaseTex;
 uniform sampler2D tex1;
 void main(){
-  fragColor = mix(texture(BaseTex , texCoord),texture(tex1 , texCoord) , 0.2);
+  fragColor = vec4(1.0,0.0,0.0,1.0);
 }

@@ -15,6 +15,7 @@
 class Model{
 public:
     Model(std::string path);
+    Model();
     bool ReadModel();
     std::vector<float>          getData(){return m_vertices;}
     std::vector<unsigned int>   getIndices(){return m_indices;}
