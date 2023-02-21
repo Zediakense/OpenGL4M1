@@ -25,7 +25,6 @@ float lastFrame = 0.f;
 Camera camera(glm::vec3(0.0,0.0,3.0),glm::vec3(0.0,0.0,0.0),glm::vec3(0.0,1.0,0.0));
 
 
-
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 //void processInput(GLFWwindow *window);
 
