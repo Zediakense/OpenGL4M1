@@ -27,8 +27,14 @@ m_shaderPath(shaderPath)
 
     
 }
+GameObject::GameObject(){
+    
+}
 
 void GameObject::draw(const Renderer &renderer){
+    if(!m_enable){
+        return;
+    }
     //behavior update@tode
     renderer.Drawer(m_vao, *m_ibo, *m_shader);
     

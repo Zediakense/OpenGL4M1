@@ -18,17 +18,27 @@
 #include "Renderer.h"
 class GameObject{
 public:
+    GameObject();
     GameObject(std::string ModelPath,std::string shaderPath);
     void draw(const Renderer & renderer);
+    void SetParent(std::shared_ptr<GameObject> parent){m_parent = parent;}
+    void SetChild(std::shared_ptr<GameObject> child){m_child = child;}
+    void SetEnable(bool enable){m_enable = enable;}
+    std::shared_ptr<GameObject>GetChild(){return m_child;}
+    
 private:
-    VertexArray                     m_vao;
-    std::unique_ptr<VertexBuffer>   m_vbo = nullptr;
-    std::unique_ptr<IndexBuffer>    m_ibo = nullptr;
-    std::string                     m_modelPath = "";
-    std::string                     m_shaderPath = "";
-    std::unique_ptr<Model>          m_model = nullptr;
-    std::shared_ptr<Shader>         m_shader = nullptr;
+    VertexArray                         m_vao;
+    std::unique_ptr<VertexBuffer>       m_vbo = nullptr;
+    std::unique_ptr<IndexBuffer>        m_ibo = nullptr;
+    std::string                         m_modelPath = "";
+    std::string                         m_shaderPath = "";
+    std::unique_ptr<Model>              m_model = nullptr;
+    std::shared_ptr<Shader>             m_shader = nullptr;
     std::shared_ptr<VertexBufferLayout> m_layout;
+    std::shared_ptr<GameObject>         m_parent = nullptr;
+    std::shared_ptr<GameObject>         m_child = nullptr;
+    bool                                m_enable = false;
+    
 };
 
 
