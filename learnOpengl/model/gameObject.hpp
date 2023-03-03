@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include "Shader.h"
 #include "Renderer.h"
+#include "Texture.h"
 class GameObject{
 public:
     GameObject();
@@ -25,6 +26,8 @@ public:
     void SetChild(std::shared_ptr<GameObject> child){m_child = child;}
     void SetEnable(bool enable){m_enable = enable;}
     std::shared_ptr<GameObject>GetChild(){return m_child;}
+    //for quick use of openGL,let's recognize a component by name and use them here
+    void temUpdateSystem(std::string name);
     
 private:
     VertexArray                         m_vao;

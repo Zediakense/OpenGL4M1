@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE37213D29A9E939009954C9 /* BaseSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE37213B29A9E939009954C9 /* BaseSystem.cpp */; };
 		CE3AA694298774A5008F77AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA693298774A5008F77AB /* main.cpp */; };
 		CE3AA69C2987755A008F77AB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AA69B2987755A008F77AB /* OpenGL.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		CE3AA6A129878949008F77AB /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AA6A029878949008F77AB /* GLUT.framework */; };
-		CE3AA6A72987DF5C008F77AB /* shaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6A52987DF5C008F77AB /* shaderProgram.cpp */; };
 		CE3AA6B12988F075008F77AB /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6AF2988F075008F77AB /* stb_image.cpp */; };
 		CE3AA6C4298A2F09008F77AB /* contextController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3AA6C2298A2F09008F77AB /* contextController.cpp */; };
 		CE3AC2F4298A59FD008F77AB /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = CE3AC2F3298A59FD008F77AB /* glad.c */; };
 		CE3AC2F6298A5ADE008F77AB /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */; };
+		CE673FD629ACD3BC0042614A /* material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE673FD429ACD3BC0042614A /* material.cpp */; };
+		CE673FDB29AE15D40042614A /* component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE673FD929AE15D40042614A /* component.cpp */; };
+		CE673FDE29AE18A90042614A /* motionSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE673FDC29AE18A90042614A /* motionSystem.cpp */; };
 		CEAD82A0299F47A5005DA6CF /* gameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEAD829E299F47A5005DA6CF /* gameObject.cpp */; };
 		CED22E57298F7A0200A0F74C /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED22E45298F7A0200A0F74C /* VertexArray.cpp */; };
 		CED22E58298F7A0200A0F74C /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED22E48298F7A0200A0F74C /* Mesh.cpp */; };
@@ -41,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE37213B29A9E939009954C9 /* BaseSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseSystem.cpp; sourceTree = "<group>"; };
+		CE37213C29A9E939009954C9 /* BaseSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseSystem.hpp; sourceTree = "<group>"; };
 		CE3AA690298774A5008F77AB /* learnOpengl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = learnOpengl; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3AA693298774A5008F77AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CE3AA69B2987755A008F77AB /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -48,9 +53,7 @@
 		CE3AA6A029878949008F77AB /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		CE3AA6A229878CDE008F77AB /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = ../../../../../../../opt/homebrew/Cellar/glfw/3.3.8/include/glad/src/glad.c; sourceTree = "<group>"; };
 		CE3AA6A429878D37008F77AB /* learnOpengl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = learnOpengl.entitlements; sourceTree = "<group>"; };
-		CE3AA6A52987DF5C008F77AB /* shaderProgram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaderProgram.cpp; sourceTree = "<group>"; };
-		CE3AA6A62987DF5C008F77AB /* shaderProgram.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shaderProgram.hpp; sourceTree = "<group>"; };
-		CE3AA6AA2987EA4E008F77AB /* pureColor.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = pureColor.shader; sourceTree = "<group>"; usesTabs = 0; };
+		CE3AA6AA2987EA4E008F77AB /* box.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = box.shader; sourceTree = "<group>"; usesTabs = 0; };
 		CE3AA6AF2988F075008F77AB /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		CE3AA6B02988F075008F77AB /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		CE3AA6C2298A2F09008F77AB /* contextController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contextController.cpp; sourceTree = "<group>"; };
@@ -58,6 +61,14 @@
 		CE3AC2F3298A59FD008F77AB /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = include/glfw/3.3.8/include/glad/src/glad.c; sourceTree = "<group>"; };
 		CE3AC2F5298A5ADE008F77AB /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = include/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		CE4FBFEE2996109A00BCC69C /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
+		CE673FD429ACD3BC0042614A /* material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
+		CE673FD529ACD3BC0042614A /* material.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = material.hpp; sourceTree = "<group>"; };
+		CE673FD729ADD8EA0042614A /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		CE673FD829ADD8EA0042614A /* container.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpeg; sourceTree = "<group>"; };
+		CE673FD929AE15D40042614A /* component.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = component.cpp; sourceTree = "<group>"; };
+		CE673FDA29AE15D40042614A /* component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = component.hpp; sourceTree = "<group>"; };
+		CE673FDC29AE18A90042614A /* motionSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = motionSystem.cpp; sourceTree = "<group>"; };
+		CE673FDD29AE18A90042614A /* motionSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = motionSystem.hpp; sourceTree = "<group>"; };
 		CEAD829E299F47A5005DA6CF /* gameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gameObject.cpp; sourceTree = "<group>"; };
 		CEAD829F299F47A5005DA6CF /* gameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gameObject.hpp; sourceTree = "<group>"; };
 		CED22E45298F7A0200A0F74C /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexArray.cpp; path = VertexBuffer/VertexArray.cpp; sourceTree = "<group>"; };
@@ -81,8 +92,8 @@
 		CED22E60298F7F7500A0F74C /* modelController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = modelController.cpp; sourceTree = "<group>"; };
 		CED22E61298F7F7500A0F74C /* modelController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = modelController.hpp; sourceTree = "<group>"; };
 		CEF5152629A8A92700C2583A /* box.model */ = {isa = PBXFileReference; lastKnownFileType = text; path = box.model; sourceTree = "<group>"; };
-		CEF5152729A8E71A00C2583A /* test.model */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.model; sourceTree = "<group>"; };
-		CEF5152829A8E82800C2583A /* test.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.shader; sourceTree = "<group>"; };
+		CEF5152729A8E71A00C2583A /* light.model */ = {isa = PBXFileReference; lastKnownFileType = text; path = light.model; sourceTree = "<group>"; };
+		CEF5152829A8E82800C2583A /* light.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = light.shader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +110,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE37213A29A9E92A009954C9 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				CE37213B29A9E939009954C9 /* BaseSystem.cpp */,
+				CE37213C29A9E939009954C9 /* BaseSystem.hpp */,
+				CE673FD929AE15D40042614A /* component.cpp */,
+				CE673FDA29AE15D40042614A /* component.hpp */,
+				CE673FDC29AE18A90042614A /* motionSystem.cpp */,
+				CE673FDD29AE18A90042614A /* motionSystem.hpp */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
 		CE3AA687298774A5008F77AB = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +145,7 @@
 		CE3AA692298774A5008F77AB /* learnOpengl */ = {
 			isa = PBXGroup;
 			children = (
+				CE37213A29A9E92A009954C9 /* system */,
 				CE4FBFEC29960BBA00BCC69C /* 3rd_party */,
 				CED22E44298F79BE00A0F74C /* render */,
 				CE3AA6C029892C27008F77AB /* asset */,
@@ -129,8 +154,6 @@
 				CE3AA6A82987DF9C008F77AB /* shader */,
 				CE3AA6A429878D37008F77AB /* learnOpengl.entitlements */,
 				CE3AA693298774A5008F77AB /* main.cpp */,
-				CE3AA6A52987DF5C008F77AB /* shaderProgram.cpp */,
-				CE3AA6A62987DF5C008F77AB /* shaderProgram.hpp */,
 				CE3AA6C2298A2F09008F77AB /* contextController.cpp */,
 				CE3AA6C3298A2F09008F77AB /* contextController.hpp */,
 			);
@@ -151,8 +174,8 @@
 		CE3AA6A82987DF9C008F77AB /* shader */ = {
 			isa = PBXGroup;
 			children = (
-				CE3AA6AA2987EA4E008F77AB /* pureColor.shader */,
-				CEF5152829A8E82800C2583A /* test.shader */,
+				CE3AA6AA2987EA4E008F77AB /* box.shader */,
+				CEF5152829A8E82800C2583A /* light.shader */,
 			);
 			path = shader;
 			sourceTree = "<group>";
@@ -180,8 +203,10 @@
 		CE3AA6C029892C27008F77AB /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				CE673FD729ADD8EA0042614A /* awesomeface.png */,
+				CE673FD829ADD8EA0042614A /* container.jpeg */,
 				CEF5152629A8A92700C2583A /* box.model */,
-				CEF5152729A8E71A00C2583A /* test.model */,
+				CEF5152729A8E71A00C2583A /* light.model */,
 			);
 			path = asset;
 			sourceTree = "<group>";
@@ -215,6 +240,8 @@
 				CED22E52298F7A0200A0F74C /* VertexBuffer.cpp */,
 				CED22E4F298F7A0200A0F74C /* VertexBuffer.h */,
 				CED22E53298F7A0200A0F74C /* VertexBufferLayout.h */,
+				CE673FD429ACD3BC0042614A /* material.cpp */,
+				CE673FD529ACD3BC0042614A /* material.hpp */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -281,17 +308,20 @@
 				CED22E5E298F7A0200A0F74C /* VertexBuffer.cpp in Sources */,
 				CE3AA694298774A5008F77AB /* main.cpp in Sources */,
 				CED22E57298F7A0200A0F74C /* VertexArray.cpp in Sources */,
+				CE673FDB29AE15D40042614A /* component.cpp in Sources */,
+				CE673FDE29AE18A90042614A /* motionSystem.cpp in Sources */,
 				CED22E5F298F7A0200A0F74C /* camera.cpp in Sources */,
 				CE3AA6B12988F075008F77AB /* stb_image.cpp in Sources */,
 				CED22E5D298F7A0200A0F74C /* mygraph.cpp in Sources */,
 				CED22E5B298F7A0200A0F74C /* Renderer.cpp in Sources */,
 				CED22E5A298F7A0200A0F74C /* Shader.cpp in Sources */,
 				CED22E62298F7F7500A0F74C /* modelController.cpp in Sources */,
-				CE3AA6A72987DF5C008F77AB /* shaderProgram.cpp in Sources */,
 				CED22E58298F7A0200A0F74C /* Mesh.cpp in Sources */,
 				CED22E5C298F7A0200A0F74C /* Texture.cpp in Sources */,
+				CE673FD629ACD3BC0042614A /* material.cpp in Sources */,
 				CE3AA6C4298A2F09008F77AB /* contextController.cpp in Sources */,
 				CED22E59298F7A0200A0F74C /* IndexBuffer.cpp in Sources */,
+				CE37213D29A9E939009954C9 /* BaseSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

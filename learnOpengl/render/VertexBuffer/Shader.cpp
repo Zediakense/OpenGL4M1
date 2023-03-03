@@ -83,7 +83,7 @@ unsigned int Shader::GetUniformLocation(const std::string &name){
     else{
         m_UniformLocationCache[name]=location;
     }
-    std::cout<<"in get location ur "<<name<<" location = : "<<location<<std::endl;
+    std::cout<<"get "<<name<<" location = "<<location<<std::endl;
     return location;
     }
 }

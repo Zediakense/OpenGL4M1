@@ -12,14 +12,17 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <glm/glm.hpp>
 
 class Model{
     
 public:
     enum DataType{
-        vertex      = 0,
-        indices     = 1,
-        compnent    = 2
+        VertexPos   = 0,
+        VertexUV    = 1,
+        VertexColor = 2,
+        indices     = 3,
+        compnent    = 4
     };
 public:
     
@@ -33,6 +36,12 @@ public:
     unsigned int                getDataSize(){return m_vertices.size() * sizeof(float);}
     bool                        ParseModel(std::vector<float>&Data,const std::string buf);
     bool                        ParseModel(std::vector<std::string>&Data,const std::string buf);
+    std::vector<unsigned int>   getElements(){return m_elements;}
+    void                        combineVertex(std::vector<std::vector<float>>points);
+    //temp use before we get a better way to deal whole engine
+    bool                        ParseComponent(std::string&Data,const std::string buf);//temp use once
+    std::string                 GetComponent(){return m_temComponent;}
+    
     
     
     
@@ -42,6 +51,11 @@ private:
     std::vector<float>              m_vertices;
     std::vector<unsigned int>       m_indices;
     std::vector<float>              m_uv;
+    std::vector<unsigned int>       m_elements;
+    bool                            m_posFlag = false;
+    bool                            m_colorFlag = false;
+    bool                            m_uvFlag = false;
+    std::string                     m_temComponent = "";//we can use one component for an object once
 };
 
 #endif /* modelController_hpp */

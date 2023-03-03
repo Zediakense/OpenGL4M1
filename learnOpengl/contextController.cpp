@@ -81,6 +81,7 @@ void contextController::LoadDummyNode(){
     m_go ->SetChild(nullptr);
     m_go ->SetParent(nullptr);
 }
+
 void contextController::tickGameObject(){
     std::shared_ptr<GameObject> p = m_go;
     Renderer renderer;
@@ -92,8 +93,9 @@ void contextController::tickGameObject(){
 
 void contextController::tickSystem(){
     //let's replace systems with a pure color instead
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.0f,0.0f,0.0f,0.0f);
+    glEnable(GL_DEPTH_TEST);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void contextController::addGameObject(std::string ModelPath ,std::string ShaderPath){
