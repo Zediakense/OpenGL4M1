@@ -93,7 +93,7 @@ void contextController::tickGameObject(){
 
 void contextController::tickSystem(){
     //let's replace systems with a pure color instead
-    glClearColor(0.0f,0.0f,0.0f,0.0f);
+    glClearColor(0.0f,0.0f,0.0f,0.3f);
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
@@ -108,6 +108,12 @@ void contextController::addGameObject(std::string ModelPath ,std::string ShaderP
     add->SetParent(p);
     add->SetChild(nullptr);
     add->SetEnable(true);
+}
+
+GameObject* contextController::GetSubsystem(std::string type)const{
+    GameObject * res = nullptr;
+    printf("%s\n",type.c_str());
+    return res;
 }
 
 

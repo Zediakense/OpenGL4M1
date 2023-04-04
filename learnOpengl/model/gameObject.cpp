@@ -59,13 +59,13 @@ void GameObject::temUpdateSystem(std::string name){
     m_shader->SetUniformMat4f("proj",projection);
     m_shader->SetUniform3f("lightPos", lightPos.x, lightPos.y, lightPos.z);
     m_shader->SetUniform3f("lightColor", lightColor.x, lightColor.y, lightColor.z);
-    m_shader->SetUniform3f("viewPos", 0.0, 0.0, -3.0);
     
     if(name == "motion"){
         glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(2.0 * sin(time),2.0 * cos(time),-3.0));
+        model = glm::translate(model, glm::vec3(2.0 * sin(time),2.0 * cos(time), -10 * abs(sin(time))));
         glm::vec3 objectColor = glm::vec3(1.0f, 0.5f, 0.31f);
-        m_shader->SetUniform3f("objectColor", objectColor.x, objectColor.y, objectColor.z);
+//        m_shader->SetUniform3f("objectColor", objectColor.x, objectColor.y, objectColor.z);
+        m_shader->SetUniform3f("viewPos", 0.0, 0.0, -3.0);
         m_shader->SetUniformMat4f("model", model);
         m_shader->SetUniform3f("material.ambient",  1.0f, 0.5f, 0.31f);
         m_shader->SetUniform3f("material.diffuse",  1.0f, 0.5f, 0.31f);

@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "contextController.hpp"
+#include "BaseSystem.hpp"
+#include "motionSystem.hpp"
 
 
 bool keys[1024];
@@ -24,9 +26,9 @@ int main()
     
     contextController::Instance().addGameObject("asset/box.model", "shader/box.shader");
     contextController::Instance().addGameObject("asset/light.model", "shader/light.shader");
-    
+    contextController::Instance().GetSubsystem<MotionSystem>();
+//    assert(false);
     contextController::Instance().tick();
-    
     
     return 0;
 }

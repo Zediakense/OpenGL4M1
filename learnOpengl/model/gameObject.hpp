@@ -17,6 +17,7 @@
 #include "Shader.h"
 #include "Renderer.h"
 #include "Texture.h"
+
 class GameObject{
 public:
     GameObject();

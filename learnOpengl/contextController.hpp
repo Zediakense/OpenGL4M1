@@ -29,6 +29,10 @@ public:
     void tickSystem();
     void tickGameObject();
     
+    GameObject* GetSubsystem(std::string type) const;
+    
+    template <class T> T* GetSubsystem() const;
+    
 private:
     unsigned int                m_width;
     unsigned int                m_height;
@@ -37,4 +41,6 @@ private:
     std::shared_ptr<GameObject> m_go = nullptr;
     
 };
+
+template <class T> T* contextController::GetSubsystem() const { return static_cast<T*>(GetSubsystem(T::getType())); }
 #endif /* contextController_hpp */

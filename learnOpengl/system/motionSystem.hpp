@@ -13,6 +13,8 @@
 class MotionSystem:public System{
 public:
     void AddComponent(GameObject * gameObject,SystemType type = SystemType::base);
+    static std::string getType(){return "Motion!";}
+
 };
 
 #endif /* motionSystem_hpp */
